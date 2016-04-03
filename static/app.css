@@ -1,0 +1,27 @@
+.environment{
+  background-color: #000;
+  color: #ddd;
+  padding: 15px;
+  margin: 10px;
+}
+.box{
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 5px;
+  float: left;
+  position: relative;
+}
+.instanceId{
+  color: #fff;
+  position: absolute;
+  top: 14px;
+  left: 22px;
+  font-size: x-large;
+}
+.age{
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  left: 7px;
+}

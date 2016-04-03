@@ -1,0 +1,14 @@
+language: none
+
+build:
+  ci:
+    - echo 'CI Running'
+
+  post_ci:
+    - docker build -t="harryi3t/dv:$BRANCH.$BUILD_NUMBER" .
+    - docker push harryi3t/dv:$BRANCH.$BUILD_NUMBER
+
+integrations:
+  hub:
+    - integrationName: "docker-test"
+      type: docker

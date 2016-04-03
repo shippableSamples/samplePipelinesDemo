@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="dv">
+  <head>
+    <meta charset="utf-8">
+    <title>Shippable DV</title>
+    <script type="text/javascript"
+      src="static/js/app.cat.js" ></script>
+    <link rel="stylesheet" href="static/css/app.cat.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller="mainController">
+    <div class="container">
+      <div class="row">
+        <div class="environment col-xs-12 col-sm-10 col-md-4 col-lg-3" ng-repeat="envBoxes in allBoxes">
+          <h3>Environment: {{envBoxes.environment}}</h3>
+          <div class="box"
+            ng-repeat="box in envBoxes.boxes"
+            style="background-color:{{box.color}}">
+            <span class="instanceId">{{box.instanceId}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
