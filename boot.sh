@@ -5,6 +5,8 @@ if [[ $MONGO_API_URL = '' ]]; then
   exit 1;
 fi
 
+bower install
+
 echo MONGO_API_URL found:  $MONGO_API_URL;
 
 cd /home/harry/dv
