@@ -327,8 +327,7 @@ c){var e=a|0,f=c;w===f&&(f=Math.min(b(a),3));Math.pow(10,f);return 1==e&&0==f?"o
   .service('Boxes', boxService);
 
   var MONGO_API_URL = null;
-  var BOX_AGE_LIMIT = 10; // max 10 seconds
-  var POLLING_INTERVAL = 5 * 1000; // every 5 seconds
+  var POLLING_INTERVAL = 3 * 1000; // every 3 seconds
 
   function mainController($scope,$http, Boxes) {
     async.series([

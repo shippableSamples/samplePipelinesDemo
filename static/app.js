@@ -4,8 +4,7 @@
   .service('Boxes', boxService);
 
   var MONGO_API_URL = null;
-  var BOX_AGE_LIMIT = 10; // max 10 seconds
-  var POLLING_INTERVAL = 5 * 1000; // every 5 seconds
+  var POLLING_INTERVAL = 3 * 1000; // every 3 seconds
 
   function mainController($scope,$http, Boxes) {
     async.series([
