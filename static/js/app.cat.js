@@ -363,6 +363,7 @@ c){var e=a|0,f=c;w===f&&(f=Math.min(b(a),3));Math.pow(10,f);return 1==e&&0==f?"o
           console.log('err', err);
         else
           $scope.allBoxes = allBoxes;
+
         _.delay(_updateBoxes, POLLING_INTERVAL);
       });
     }
@@ -382,10 +383,8 @@ c){var e=a|0,f=c;w===f&&(f=Math.min(b(a),3));Math.pow(10,f);return 1==e&&0==f?"o
                 var now = new Date().getTime();
                 var boxUpdatedAt = new Date(dbObj.updatedAt.$date).getTime();
                 var age = Math.round(10*(now - boxUpdatedAt) / 1000)/10;
+                console.log('age of ', dbObj.environment, ' is ', age);
                 return new Box(dbObj.color, dbObj.environment, age);
-              })
-              .filter(function(box){
-                return box.age <= BOX_AGE_LIMIT;
               })
               .groupBy('environment')
               .each(function(envBoxes, envName){
