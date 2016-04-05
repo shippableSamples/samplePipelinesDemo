@@ -1,5 +1,5 @@
 (function(){
-  app = angular.module('dv',[])
+  app = angular.module('dv',['ngAnimate'])
   .controller('mainController' , mainController)
   .service('Boxes', boxService);
 
@@ -7,15 +7,37 @@
   var POLLING_INTERVAL = 3 * 1000; // every 3 seconds
 
   function mainController($scope,$http, Boxes) {
-    async.series([
-      _getMongoApiUrl
-    ], function (err) {
-      if (err)
-        console.log('Error while getting the MONGO_API_URL: ', err);
-      else {
-        _updateBoxes();
-      }
-    });
+    var testBox = new Box('red', 'test', 1, 1);
+    var testEnv = {
+      environment: 'test',
+      boxes: [testBox]
+    };
+
+    $scope.allBoxes = [
+      testEnv
+    ];
+
+    $scope.addBox = function(){
+      $scope.allBoxes[0].boxes.push(testBox);
+    };
+
+    $scope.removeBox = function(){
+      $scope.allBoxes[0].boxes.shift();
+    };
+
+    _init();
+
+    function _init() {
+      async.series([
+        _getMongoApiUrl
+      ], function (err) {
+        if (err)
+          console.log('Error while getting the MONGO_API_URL: ', err);
+        else {
+          _updateBoxes();
+        }
+      });
+    }
 
     function _getMongoApiUrl(next) {
       $http({
@@ -85,9 +107,10 @@
     };
   }
 
-  function Box(color, environment, age) {
+  function Box(color, environment, age, instanceId) {
     this.color = color;
     this.environment = environment;
     this.age = age;
+    this.instanceId = instanceId;
   }
 })();
