@@ -420,11 +420,11 @@ function(a){a.end()})}}var d=[];b&&d.push(b.start());r&&d.push(r.start());c.all(
     }
 
     function _updateBoxes() {
-      Boxes.get(function(err, allBoxes){
+      Boxes.get(function(err, environments){
         if (err)
           console.log('err', err);
         else
-          $scope.allBoxes = allBoxes;
+          $scope.environments = environments;
 
         _.delay(_updateBoxes, POLLING_INTERVAL);
       });
@@ -456,7 +456,7 @@ function(a){a.end()})}}var d=[];b&&d.push(b.start());r&&d.push(r.start());c.all(
               })
               .map(function(value, key){
                 var obj = {};
-                obj.environment=key;
+                obj.envName=key;
                 obj.boxes = value;
                 return obj;
               })
