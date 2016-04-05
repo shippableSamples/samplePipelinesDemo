@@ -389,24 +389,6 @@ function(a){a.end()})}}var d=[];b&&d.push(b.start());r&&d.push(r.start());c.all(
   var POLLING_INTERVAL = 3 * 1000; // every 3 seconds
 
   function mainController($scope,$http, Boxes) {
-    var testBox = new Box('red', 'test', 1, 1);
-    var testEnv = {
-      environment: 'test',
-      boxes: [testBox]
-    };
-
-    $scope.allBoxes = [
-      testEnv
-    ];
-
-    $scope.addBox = function(){
-      $scope.allBoxes[0].boxes.push(testBox);
-    };
-
-    $scope.removeBox = function(){
-      $scope.allBoxes[0].boxes.shift();
-    };
-
     _init();
 
     function _init() {
