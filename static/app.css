@@ -1,8 +1,7 @@
 .environment{
-  background-color: #145883;
-  color: #ddd;
   padding: 15px;
   margin: 10px;
+  margin: 50px 113px;
 }
 .box{
   width: 60px;
@@ -18,12 +17,6 @@
   top: 14px;
   left: 22px;
   font-size: x-large;
-}
-.age{
-  color: #fff;
-  position: absolute;
-  top: 30px;
-  left: 7px;
 }
 
 .animate-repeat {
@@ -57,10 +50,11 @@
   max-height:30px;
 }
 
-
+/*Canvas CSS*/
 #canvasContainer {
   overflow:hidden;
   position:absolute;
+  z-index: -2;
 }
 #pixie {
   z-index:0;
@@ -71,4 +65,78 @@
   background:linear-gradient(top, #040429, #257eb7);
   filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#040429', EndColorStr='#257eb7');
   -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#040429', EndColorStr='#257eb7')";
+}
+
+/*Cloud CSS*/
+.cloud {
+	width: 400px;
+  height: 137px;
+	background: #d6f0fd;
+	background: linear-gradient(top, #d6f0fd 5%, #257eb7 100%);
+	background: -webkit-linear-gradient(top, #d6f0fd 5%, #257eb7 100%);
+	background: -moz-linear-gradient(top, #d6f0fd 5%, #257eb7 100%);
+	background: -ms-linear-gradient(top, #d6f0fd 5%, #257eb7 100%);
+	background: -o-linear-gradient(top, #d6f0fd 5%, #257eb7 100%);
+
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+
+	position: relative;
+	margin: 120px auto 20px;
+}
+
+.cloud:after, .cloud:before {
+	content: '';
+	position: absolute;
+	background: #d6f0fd;
+	z-index: -1;
+}
+
+.cloud:after {
+  width: 130px;
+  height: 130px;
+  top: -50px;
+  left: 65px;
+
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+.cloud:before {
+  width: 190px;
+  height: 190px;
+  top: -90px;
+  right: 56px;
+
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+}
+
+.shadow {
+	width: 350px;
+	position: absolute; bottom: -10px;
+	background: #000;
+	z-index: -1;
+
+	box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
+.child { /* This is the item to center... */
+  display: inline-block;
+}
+.parent { /* ...and this is its parent container. */
+  text-align: center;
+}
+.cloudEnv {
+  margin-top: -30px;
+  margin-bottom: 20px;
 }

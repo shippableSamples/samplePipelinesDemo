@@ -10,7 +10,13 @@ var WIDTH = window.innerWidth,
 
 function setDimensions(e) {
   WIDTH = window.innerWidth;
-  HEIGHT = window.innerHeight;
+  var body = document.body;
+  var html = document.documentElement;
+  var height = Math.max(
+    body.scrollHeight, body.offsetHeight,
+    html.clientHeight, html.scrollHeight, html.offsetHeight );
+  console.log('height',height);
+  HEIGHT = height;
   container.style.width = WIDTH+'px';
   container.style.height = HEIGHT+'px';
   canvas.width = WIDTH;
