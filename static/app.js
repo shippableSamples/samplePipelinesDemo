@@ -63,10 +63,8 @@
                   var now = new Date().getTime();
                   var boxUpdatedAt = new Date(dbObj.updatedAt.$date).getTime();
                   var age = Math.round(10 * (now - boxUpdatedAt) / 1000) / 10;
-                  if (age <= 4) {
-                    console.log('age of ', dbObj.environment, ' is ', age);
-                    return new Box(dbObj.color, dbObj.environment, age);
-                  }
+                  console.log('age of ', dbObj.environment, ' is ', age);
+                  return new Box(dbObj.color, dbObj.environment, age);
                 })
                 .groupBy('environment')
                 .each(function (envBoxes, envName) {
