@@ -7,8 +7,8 @@
   var POLLING_INTERVAL = 3 * 1000; // every 3 seconds
 
   function mainController($scope, $http, Boxes) {
-    //_init();
-    _testOffline();
+    _init();
+    //_testOffline();
 
     function _testOffline() {
       $scope.environments = JSON.parse('[{"envName":"prod","boxes":[{"color":"#038505","environment":"prod","age":1.6,"instanceId":1},{"color":"#038505","environment":"prod","age":1.6,"instanceId":2}],"$$hashKey":"object:550"},{"envName":"prod2","boxes":[{"color":"#038505","environment":"prod2","age":1.6,"instanceId":1},{"color":"#038505","environment":"prod2","age":1.6,"instanceId":2}],"$$hashKey":"object:550"},{"envName":"beta","boxes":[{"color":"#038505","environment":"beta","age":1.6,"instanceId":1},{"color":"#038505","environment":"beta","age":1.6,"instanceId":2}],"$$hashKey":"object:548"},{"envName":"local","boxes":[{"color":"#038505","environment":"local","age":1.5,"instanceId":1}],"$$hashKey":"object:549"},{"envName":"test","boxes":[{"color":"#038505","environment":"test","age":5.5,"instanceId":1},{"color":"#038505","environment":"test","age":5.5,"instanceId":2},{"color":"#038505","environment":"test","age":1.5,"instanceId":3}],"$$hashKey":"object:551"}]');
