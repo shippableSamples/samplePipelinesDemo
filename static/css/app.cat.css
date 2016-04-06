@@ -7,7 +7,7 @@
 .environment{
   padding: 15px;
   margin: 10px;
-  margin: 50px 113px;
+  margin: 10px 113px;
 }
 .box{
   width: 60px;
@@ -56,7 +56,7 @@
   max-height:30px;
 }
 
-/*Can*/
+/*Canvas CSS*/
 #canvasContainer {
   overflow:hidden;
   position:absolute;
@@ -73,7 +73,7 @@
   -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#040429', EndColorStr='#257eb7')";
 }
 
-/*Cloud Css*/
+/*Cloud CSS*/
 .cloud {
 	width: 400px;
   height: 137px;

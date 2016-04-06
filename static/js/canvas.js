@@ -1,5 +1,4 @@
 var WIDTH = window.innerWidth,
-  HEIGHT = window.innerHeight,
   MAX_PARTICLES = 100,
   DRAW_INTERVAL = 60,
   container = document.querySelector('#canvasContainer'),
@@ -7,16 +6,16 @@ var WIDTH = window.innerWidth,
   context = canvas.getContext('2d'),
   gradient = null,
   pixies = [];
+var contentHeight = document.querySelector('#cloudSpace').scrollHeight;
+var windowHeight = window.innerHeight;
+var HEIGHT = windowHeight>contentHeight?windowHeight:contentHeight;
 
 function setDimensions(e) {
   WIDTH = window.innerWidth;
   var body = document.body;
   var html = document.documentElement;
-  var height = Math.max(
-    body.scrollHeight, body.offsetHeight,
-    html.clientHeight, html.scrollHeight, html.offsetHeight );
-  console.log('height',height);
-  HEIGHT = height;
+  var windowHeight = window.innerHeight;
+  var HEIGHT = windowHeight>contentHeight?windowHeight:contentHeight;
   container.style.width = WIDTH+'px';
   container.style.height = HEIGHT+'px';
   canvas.width = WIDTH;
@@ -93,21 +92,7 @@ function draw() {
 }
 setInterval(draw, DRAW_INTERVAL);
 
+
 $(document).ready(function(){
-  var $mountains = $('#mountains');
-  var $grass = $('#grass');
-  var $container = $('#canvasContainer');
-  $container.mousedown(function(ev){
-    var ox = ev.clientX;
-    var om = parseInt($mountains.css('background-position').substr(0, $mountains.css('background-position').search(' ')));
-    var og = parseInt($grass.css('background-position').substr(0, $grass.css('background-position').search(' ')));
-    $container.mousemove(function(e){
-      $mountains.css('background-position', om+((e.clientX-ox)/10)+'px 0px');
-      $grass.css('background-position', og+((e.clientX-ox)/4)+'px 10px');
-    });
-    $container.mouseup(function(){
-      $container.unbind('mousemove');
-      $container.unbind('mouseup');
-    });
-  });
+  setDimensions();
 });

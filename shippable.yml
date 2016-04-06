@@ -3,7 +3,7 @@ language: none
 build:
   ci:
     - echo 'CI Running'
-    - export IMAGE_NAME=aye0aye/dv
+    - export IMAGE_NAME=harryi3t/dv
     - ./build.sh
 
   post_ci:
@@ -11,7 +11,7 @@ build:
 
 integrations:
   hub:
-    - integrationName: "shipdeploy"
+    - integrationName: "docker-test"
       type: docker
       branches:
         only:

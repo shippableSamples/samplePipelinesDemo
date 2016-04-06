@@ -17,9 +17,7 @@ module.exports = function (grunt) {
         src: [
           'bower_components/jquery/dist/jquery.min.js',
           'bower_components/angular/angular.min.js',
-          'bower_components/angular-animate/angular-animate.min.js',
-          'bower_components/underscore/underscore-min.js',
-          'bower_components/async/dist/async.min.js'
+          'bower_components/underscore/underscore-min.js'
         ],
         dest: 'static/js/lib.cat.js'
       },

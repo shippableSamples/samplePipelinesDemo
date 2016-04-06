@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/aye0aye/dv#readme",
   "dependencies": {
-    "async": "^2.0.0-rc.2",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "mongoose": "^4.4.10",

@@ -12,27 +12,28 @@
     <div id="canvasContainer">
 			<canvas id="pixie"></canvas>
 		</div>
-    <script type="text/javascript" src='static/js/canvas.js'> </script>
-    <div class="container">
+    <div class="container" id="cloudSpace">
       <div class="row">
-        <div class="environment col-xs-12 col-sm-10 col-md-4 col-lg-3" ng-repeat="environment in environments | orderBy:'envName'">
+        <div class="environment col-xs-12 col-sm-10 col-md-4 col-lg-3" ng-repeat="environment in environments | orderBy:'envName' track by $index">
           <div class="cloud">
-              <div class="parent">
-                <div class="cloudEnv">
-                  <h3>{{environment.envName}}</h3>
-                </div>
-                <div class="child"
-                  ng-repeat="box in environment.boxes track by $index">
-                  <div class="box"
-                    style="background-color:{{box.color}}">
-                    <span class="instanceId">{{box.instanceId}}</span>
-                  </div>
+            <div class="parent">
+              <div class="cloudEnv">
+                <h3>{{environment.envName}}</h3>
+              </div>
+              <div class="child"
+                ng-repeat="box in environment.boxes track by $index">
+                <div class="box"
+                  style="background-color:{{box.color}}">
+                  <span class="instanceId">{{box.instanceId}}</span>
                 </div>
               </div>
+            </div>
             <span class='shadow'></span>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script type="text/javascript"
+      src="static/js/canvas.js" ></script>
 </html>
