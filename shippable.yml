@@ -3,12 +3,16 @@ language: none
 build:
   ci:
     - echo 'CI Running'
+    - export IMAGE_NAME=aye0aye/dv
+    - ./build.sh
 
   post_ci:
-    - docker build -t="harryi3t/dv:$BRANCH.$BUILD_NUMBER" .
-    - docker push harryi3t/dv:$BRANCH.$BUILD_NUMBER
+    - ./push.sh
 
 integrations:
   hub:
-    - integrationName: "docker-test"
+    - integrationName: "shipdeploy"
       type: docker
+      branches:
+        only:
+          - master

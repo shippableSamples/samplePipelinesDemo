@@ -9,7 +9,7 @@ checkEnvironmentVariables() {
   echo 'All variables are present.'
 }
 startServer() {
-  cd /home/harry/dv
+  cd /home/demo/dv
   echo 'server started without forever'
   node server.js
 }

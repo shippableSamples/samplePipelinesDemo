@@ -5,7 +5,7 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/harryi3t/dv.git"
+    "url": "git+https://github.com/aye0aye/dv.git"
   },
   "keywords": [
     "angularjs"
@@ -13,9 +13,9 @@
   "author": "harryi3t (https://github.com/harryi3t)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/harryi3t/dv/issues"
+    "url": "https://github.com/aye0aye/dv/issues"
   },
-  "homepage": "https://github.com/harryi3t/dv#readme",
+  "homepage": "https://github.com/aye0aye/dv#readme",
   "dependencies": {
     "async": "^2.0.0-rc.2",
     "ejs": "^2.4.1",

@@ -1,7 +1,7 @@
 FROM node:0.10.44-slim
 
-ADD . /home/harry/dv/
+ADD . /home/demo/dv/
 
-RUN cd /home/harry/dv && npm install
+RUN cd /home/demo/dv && npm install
 
-ENTRYPOINT ["/home/harry/dv/boot.sh"]
+ENTRYPOINT ["/home/demo/dv/boot.sh"]
