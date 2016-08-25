@@ -1,0 +1,15 @@
+jobs:
+  - name: pipelines-demo-manifest
+    type: manifest
+    steps:
+     - IN: pipelines-demo-image
+     - TASK: managed
+
+  - name: deploy-pipelines-demo
+    type: deploy
+    steps:
+      - IN: pipelines-demo-manifest
+      - IN: docker-options
+      - IN: ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade

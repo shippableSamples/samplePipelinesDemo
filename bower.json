@@ -1,0 +1,27 @@
+{
+  "name": "dv",
+  "description": "shows visually status of deployments using a central d",
+  "main": "server.js",
+  "authors": [
+    "harryi3t"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angularjs"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.2",
+    "bootstrap": "^3.3.6",
+    "underscore": "^1.8.3",
+    "font-awesome": "^4.5.0"
+  }
+}

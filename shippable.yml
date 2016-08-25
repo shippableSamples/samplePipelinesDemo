@@ -1,0 +1,22 @@
+language: none
+
+build:
+  ci:
+    - echo 'CI Running'
+    - export IMAGE_NAME=shippablesamples/samplepipelinesdemo
+    - ./build.sh
+
+  post_ci:
+    - ./push.sh
+
+integrations:
+  hub:
+    - integrationName: "shipdeploy"
+      type: docker
+  notifications:
+    - integrationName: "triggerPipelinesDemo"
+      type: webhook
+      payload:
+        - versionName=$BRANCH.$BUILD_NUMBER
+      on_success: always
+      on_failure: never
