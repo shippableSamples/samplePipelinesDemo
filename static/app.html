@@ -2,7 +2,7 @@
 <html ng-app="dv">
   <head>
     <meta charset="utf-8">
-    <title>Shippable DV</title>
+    <title>Shippable Pipelines DV</title>
     <script type="text/javascript"
       src="static/js/app.cat.js" ></script>
     <link rel="stylesheet" href="static/css/app.cat.css" media="screen" title="no title" charset="utf-8">
@@ -13,25 +13,7 @@
 			<canvas id="pixie"></canvas>
 		</div>
     <div class="container" id="cloudSpace">
-      <div class="row">
-        <div class="environment col-xs-12 col-sm-10 col-md-4 col-lg-3" ng-repeat="environment in environments | orderBy:'envName' track by $index">
-          <div class="cloud">
-            <div class="parent">
-              <div class="cloudEnv">
-                <h3>{{environment.envName}}</h3>
-              </div>
-              <div class="child"
-                ng-repeat="box in environment.boxes track by $index">
-                <div class="box"
-                  style="background-color:{{box.color}}">
-                  <span class="instanceId">{{box.instanceId}}</span>
-                </div>
-              </div>
-            </div>
-            <span class='shadow'></span>
-          </div>
-        </div>
-      </div>
+      <img ng-src="ayeAyeCaptain.png" />
     </div>
   </body>
   <script type="text/javascript"
