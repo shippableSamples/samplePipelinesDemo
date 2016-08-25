@@ -5,16 +5,16 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shippableSamples/samplePipelinesDv.git"
+    "url": "git+https://github.com/shippableSamples/samplePipelinesDemo.git"
   },
   "keywords": [
     "angularjs"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shippableSamples/samplePipelinesDv/issues"
+    "url": "https://github.com/shippableSamples/samplePipelinesDemo/issues"
   },
-  "homepage": "https://github.com/shippableSamples/samplePipelinesDv#readme",
+  "homepage": "https://github.com/shippableSamples/samplePipelinesDemo#readme",
   "dependencies": {
     "ejs": "^2.4.1",
     "express": "^4.13.4",
