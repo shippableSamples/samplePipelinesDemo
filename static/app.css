@@ -1,22 +1,13 @@
-.environment{
-  padding: 15px;
-  margin: 10px;
-  margin: 10px 113px;
-}
-.box{
-  width: 60px;
-  height: 60px;
+.ayeAye{
+  width: 90%;
   border-radius: 10px;
-  margin: 5px;
-  float: left;
-  position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
 }
-.instanceId{
+.shippableText{
   color: #fff;
-  position: absolute;
-  top: 14px;
-  left: 22px;
-  font-size: x-large;
+  text-align: center;
+  font-size: 8em;
 }
 
 .animate-repeat {
