@@ -1,12 +1,12 @@
 resources:
   - name: pipelines-demo-image
     type: image
-    integration: shipdeploy
+    integration: AlejandroPrivate
     pointer:
-      sourceName: "shippablesamples/samplepipelinesdemo"
+      sourceName: "morsisdivine/samplepipelinesdemo"
       isPull: false
     seed:
-      versionName: "latest"
+      versionName: "shippable.2"
 
   - name: docker-options
     type: dockerOptions
