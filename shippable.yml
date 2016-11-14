@@ -11,7 +11,7 @@ build:
 
 integrations:
   hub:
-    - integrationName: "shipdeploy"
+    - integrationName: "AlejandroPrivate"
       type: docker
 #  notifications:
 #    - integrationName: "triggerPipelinesDemo"
