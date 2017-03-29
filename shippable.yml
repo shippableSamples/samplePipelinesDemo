@@ -3,7 +3,7 @@ language: none
 build:
   ci:
     - echo 'CI Running'
-    - export IMAGE_NAME=shippablesamples/samplepipelinesdemo
+    - export IMAGE_NAME=saorio/samplepipelinesdemo
     - ./build.sh
 
   post_ci:
@@ -11,6 +11,9 @@ build:
 
 integrations:
   hub:
-    - integrationName: "shipdeploy"
+    - integrationName: saorio-docker-hub
       type: docker
+      branches:
+        only:
+         - master
 

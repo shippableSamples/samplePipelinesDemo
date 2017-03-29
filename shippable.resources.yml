@@ -1,9 +1,9 @@
 resources:
   - name: pipelines-demo-image
     type: image
-    integration: shipdeploy
+    integration: aws-test
     pointer:
-      sourceName: "shippablesamples/samplepipelinesdemo"
+      sourceName: "saorio/samplepipelinesdemo"
       isPull: false
     seed:
       versionName: "latest"
@@ -19,4 +19,4 @@ resources:
     integration: aws
     pointer:
       sourceName : "my-cluster" #name of the cluster to which we are deploying
-      region: "us-west-2"
+      region: "ap-northeast-1"
