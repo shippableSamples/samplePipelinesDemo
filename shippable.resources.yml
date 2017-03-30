@@ -13,10 +13,10 @@ resources:
       isPull: false
     #make sure this seed version exists in your registry account
     seed:
-      versionName: latest
+      versionName: "latest"
 
 # Docker Image Options for VISUALIZER
-  - name: samplepipelinesdemo-opts
+  - name: docker-options
     type: dockerOptions
     version:
       memory: 512
