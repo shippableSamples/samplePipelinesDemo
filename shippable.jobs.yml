@@ -24,5 +24,6 @@ jobs:
   - name: samplePipelinesDemo_runCI
     type: runCI
     steps:
-      - OUT: samplepipelinesdemo
+      - IN: samplepipelinesdemo
+      - OUT: ecs-cluster
 # / Connect CI with dv-img resource
