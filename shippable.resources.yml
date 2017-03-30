@@ -1,22 +1,43 @@
 resources:
-  - name: pipelines-demo-image
+
+# resources for the dv demo pipelines from CI thru TEST environment
+
+#######1: Create DV pipeline
+
+# Docker Image for VISUALIZER
+  - name: samplepipelinesdemo
     type: image
-    integration: aws-test
+    integration: saorio-docker-hub
     pointer:
       sourceName: "saorio/samplepipelinesdemo"
       isPull: false
+    #make sure this seed version exists in your registry account
     seed:
-      versionName: "latest"
+      versionName: latest
 
-  - name: docker-options
+# Docker Image Options for VISUALIZER
+  - name: samplepipelinesdemo-opts
     type: dockerOptions
     version:
+      memory: 512
+      cpuShares: 1024
       portMappings:
         - 80:80
+      publishAllPorts : true
 
-  - name: ecs-cluster
+# env vars for VISUALIZER
+#  - name: dv-params
+#    type: params
+#    version:
+#      params:
+#        MONGO_API_URL: "https://api.mlab.com/api/1/databases/box-pipev2/collections/boxes?apiKey=QRsFUOV7XbNdHfTnJ7KU9bgQdnun-m_I"
+
+# add TEST env - AWS cluster
+  - name: demo-shippable-ecs-test
     type: cluster
-    integration: aws
+    integration: demo-manishas-ecs-test
     pointer:
-      sourceName : "my-cluster" #name of the cluster to which we are deploying
+      sourceName : "saorio/samplepipelinesdemo"
       region: "ap-northeast-1"
+
+#######1: EOF Create DV pipeline
