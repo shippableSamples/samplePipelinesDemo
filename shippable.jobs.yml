@@ -14,9 +14,8 @@ jobs:
   - name: pipelines-demo-deploy
     type: deploy
     steps:
-      - IN: samplepipelinesdemo
-      - OUT: ecs-cluster
-      - TASK: managed
+      - IN: pipelines-demo-manifest
+      - IN: ecs-cluster
 
 # / TEST deployment for VISUALIZER to Amazon ECS
 
@@ -24,6 +23,5 @@ jobs:
   - name: samplePipelinesDemo_runCI
     type: runCI
     steps:
-      - IN: samplepipelinesdemo
       - OUT: ecs-cluster
 # / Connect CI with dv-img resource
