@@ -35,7 +35,7 @@ resources:
 # add TEST env - AWS cluster
   - name: ecs-cluster
     type: integration
-    integration: demo-manishas-ecs-test
+    integration: fuji-aws
     pointer:
       sourceName : "demo-shippable-ecs-test"
       region: "ap-northeast-1"
