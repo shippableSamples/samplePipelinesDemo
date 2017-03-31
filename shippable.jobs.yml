@@ -15,7 +15,7 @@ jobs:
     type: deploy
     steps:
       - IN: samplepipelinesdemo
-      - IN: ecs-cluster
+      - OUT: ecs-cluster
       - TASK: managed
 
 # / TEST deployment for VISUALIZER to Amazon ECS

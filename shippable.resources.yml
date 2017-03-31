@@ -6,7 +6,7 @@ resources:
 
 # Docker Image for VISUALIZER
   - name: samplepipelinesdemo
-    type: image
+    type: integration
     integration: saorio-docker-hub
     pointer:
       sourceName: "saorio/samplepipelinesdemo"
@@ -34,7 +34,7 @@ resources:
 
 # add TEST env - AWS cluster
   - name: ecs-cluster
-    type: cluster
+    type: integration
     integration: demo-manishas-ecs-test
     pointer:
       sourceName : "demo-shippable-ecs-test"
