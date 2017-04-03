@@ -27,7 +27,7 @@ resources:
 # add TEST env - AWS cluster
   - name: ecs-cluster
     type: cluster
-    integration: fuji-aws
+    integration: aws-fuji-iam
     pointer:
       sourceName : "demo-shippable-ecs-test"
       region: "ap-northeast-1"
