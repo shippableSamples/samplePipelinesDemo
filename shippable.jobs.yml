@@ -13,9 +13,8 @@ jobs:
   - name: pipelines-demo-deploy
     type: deploy
     steps:
-      - IN: pipelines-demo-manifest
+      - IN: samplepipelinesdemo
       - IN: docker-options
-      - IN: ecs-cluster
       - TASK: managed
         deploymethod: upgrade
 # / TEST deployment for VISUALIZER to Amazon ECS
@@ -24,5 +23,5 @@ jobs:
   - name: samplePipelinesDemo_runCI
     type: runCI
     steps:
-      - OUT: samplepipelinesdemo
+      - OUT: ecs-cluster
 # / Connect CI with dv-img resource

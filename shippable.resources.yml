@@ -4,7 +4,7 @@ resources:
     integration: saorio-docker-hub
     pointer:
       sourceName: "saorio/samplepipelinesdemo"
-      isPull: false
+      isPull: true
     seed:
       versionName: "latest"
 
