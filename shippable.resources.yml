@@ -1,21 +1,13 @@
 resources:
-
-# resources for the dv demo pipelines from CI thru TEST environment
-
-#######1: Create DV pipeline
-
-# Docker Image for VISUALIZER
   - name: samplepipelinesdemo
-    type: integration
+    type: image
     integration: saorio-docker-hub
     pointer:
       sourceName: "saorio/samplepipelinesdemo"
       isPull: false
-    #make sure this seed version exists in your registry account
     seed:
       versionName: "latest"
 
-# Docker Image Options for VISUALIZER
   - name: docker-options
     type: dockerOptions
     version:
@@ -34,10 +26,9 @@ resources:
 
 # add TEST env - AWS cluster
   - name: ecs-cluster
-    type: integration
+    type: cluster
     integration: fuji-aws
     pointer:
       sourceName : "demo-shippable-ecs-test"
       region: "ap-northeast-1"
 
-#######1: EOF Create DV pipeline

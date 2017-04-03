@@ -5,7 +5,6 @@ jobs:
     type: manifest
     steps:
       - IN: samplepipelinesdemo
-      - IN: samplepipelinesdemo-opts
       - TASK: managed
 
 #/ manifest gen for VISUALIZER
@@ -15,13 +14,15 @@ jobs:
     type: deploy
     steps:
       - IN: pipelines-demo-manifest
+      - IN: docker-options
       - IN: ecs-cluster
-
+      - TASK: managed
+        deploymethod: upgrade
 # / TEST deployment for VISUALIZER to Amazon ECS
 
 # Connect CI with dv-img resource
-  - name: samplePipelinesDemo_runCI
-    type: runCI
-    steps:
-      - OUT: ecs-cluster
+#  - name: samplePipelinesDemo_runCI
+#    type: runCI
+#    steps:
+#      - OUT: ecs-cluster
 # / Connect CI with dv-img resource
