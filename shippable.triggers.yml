@@ -1,0 +1,4 @@
+- name: sampletrigger
+  type: trigger
+  version:
+   counter: 1
