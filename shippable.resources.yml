@@ -15,7 +15,6 @@ resources:
       cpuShares: 1024
       portMappings:
         - 80:80
-      publishAllPorts : true
 
 # env vars for VISUALIZER
 #  - name: dv-params
