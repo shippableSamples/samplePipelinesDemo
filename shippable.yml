@@ -11,9 +11,6 @@ build:
 
 integrations:
   hub:
-    - integrationName: saorio-docker-hub
+    - integrationName: "saorio-docker-hub"
       type: docker
-      branches:
-        only:
-         - master
 

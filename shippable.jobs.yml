@@ -18,3 +18,9 @@ jobs:
       - IN: ecs-cluster
       - TASK: managed
         deploymethod: upgrade
+
+# Connect CI with dv-img resource
+  - name: samplePipelinesTest_runCI
+    type: runCI
+    steps:
+      - OUT: samplepipelinesdemo        

@@ -4,7 +4,7 @@ resources:
     integration: saorio-docker-hub
     pointer:
       sourceName: "saorio/samplepipelinesdemo"
-      isPull: true
+      isPull: false
     seed:
       versionName: "latest"
 
@@ -26,7 +26,7 @@ resources:
 # add TEST env - AWS cluster
   - name: ecs-cluster
     type: cluster
-    integration: aws-fuji-iam
+    integration: fuji-aws
     pointer:
       sourceName : "demo-shippable-ecs-test"
       region: "ap-northeast-1"
